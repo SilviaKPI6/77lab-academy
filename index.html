@@ -1,32 +1,135 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="it">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.3">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>77LAB Marketing Academy - Silvia Ciampa</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="it"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;77LAB Marketing Academy - Silvia Ciampa&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="description" content="La formazione marketing completa con Silvia Ciampa"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://unpkg.com/@babel/standalone/babel.min.js"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="root"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script type="text/babel" src="app.js"&gt;&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+    <div id="root"></div>
+    <script type="text/babel">
+        const { useState } = React;
+
+        const MarketingAcademy = () => {
+          const [language, setLanguage] = useState('it');
+
+          return (
+            <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #f9fafb, #eff6ff)' }}>
+              <header style={{ background: 'white', borderBottom: '1px solid #e5e7eb' }}>
+                <div style={{ maxWidth: '80rem', margin: '0 auto', padding: '1rem' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                      <div style={{ width: '2.5rem', height: '2.5rem', background: 'linear-gradient(to bottom right, #2563eb, #9333ea)', borderRadius: '0.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <span style={{ color: 'white', fontWeight: 'bold', fontSize: '1.25rem' }}>77</span>
+                      </div>
+                      <div>
+                        <div style={{ fontWeight: 'bold', color: '#111827' }}>77LAB</div>
+                        <div style={{ fontSize: '0.75rem', color: '#6b7280' }}>Marketing Academy</div>
+                      </div>
+                    </div>
+                    <div style={{ display: 'flex', gap: '0.5rem' }}>
+                      <button 
+                        onClick={() => setLanguage('it')}
+                        style={{ 
+                          padding: '0.5rem 0.75rem', 
+                          borderRadius: '0.5rem', 
+                          fontWeight: '500',
+                          background: language === 'it' ? '#2563eb' : '#f3f4f6',
+                          color: language === 'it' ? 'white' : '#4b5563',
+                          border: 'none',
+                          cursor: 'pointer'
+                        }}
+                      >
+                        IT
+                      </button>
+                      <button 
+                        onClick={() => setLanguage('en')}
+                        style={{ 
+                          padding: '0.5rem 0.75rem', 
+                          borderRadius: '0.5rem', 
+                          fontWeight: '500',
+                          background: language === 'en' ? '#2563eb' : '#f3f4f6',
+                          color: language === 'en' ? 'white' : '#4b5563',
+                          border: 'none',
+                          cursor: 'pointer'
+                        }}
+                      >
+                        EN
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </header>
+
+              <main style={{ maxWidth: '80rem', margin: '0 auto', padding: '3rem 1rem' }}>
+                <div style={{ textAlign: 'center', padding: '5rem 1rem' }}>
+                  <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#eff6ff', color: '#1d4ed8', padding: '0.5rem 1rem', borderRadius: '9999px', marginBottom: '1.5rem', fontSize: '0.875rem', fontWeight: '500' }}>
+                    <span>✨</span>
+                    <span>AI-Powered Marketing Education</span>
+                  </div>
+                  <h1 style={{ fontSize: '3.75rem', fontWeight: 'bold', color: '#111827', marginBottom: '1rem' }}>
+                    77LAB Marketing Academy
+                  </h1>
+                  <p style={{ fontSize: '1.5rem', color: '#374151', fontWeight: '600', marginBottom: '1.5rem' }}>
+                    {language === 'it' ? 'con Silvia Ciampa' : 'with Silvia Ciampa'}
+                  </p>
+                  <p style={{ fontSize: '1.25rem', color: '#6b7280', marginBottom: '2rem', maxWidth: '48rem', margin: '0 auto 2rem' }}>
+                    {language === 'it' ? 'La tua risorsa completa per diventare un Marketing Expert' : 'Your complete resource to become a Marketing Expert'}
+                  </p>
+                  
+                  <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem', marginBottom: '3rem' }}>
+                    {['23 Moduli Completi', '7 Fasi', 'AI-Powered', 'Multilingue'].map((feature, idx) => (
+                      <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'white', padding: '0.5rem 1rem', borderRadius: '0.5rem', boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.05)', border: '1px solid #e5e7eb' }}>
+                        <span style={{ color: '#16a34a' }}>✓</span>
+                        <span style={{ color: '#374151', fontWeight: '500' }}>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <button style={{ background: 'linear-gradient(to right, #2563eb, #9333ea)', color: 'white', padding: '1rem 2rem', borderRadius: '0.75rem', fontWeight: '600', fontSize: '1.125rem', border: 'none', cursor: 'pointer', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)' }}>
+                    {language === 'it' ? 'Inizia il Percorso →' : 'Start Learning →'}
+                  </button>
+                </div>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem', maxWidth: '80rem', margin: '0 auto', padding: '0 1rem' }}>
+                  <div style={{ textAlign: 'center' }}>
+                    <div style={{ fontSize: '2.25rem', fontWeight: 'bold', color: '#2563eb', marginBottom: '0.5rem' }}>500+</div>
+                    <div style={{ color: '#6b7280' }}>{language === 'it' ? 'Studenti Attivi' : 'Active Students'}</div>
+                  </div>
+                  <div style={{ textAlign: 'center' }}>
+                    <div style={{ fontSize: '2.25rem', fontWeight: 'bold', color: '#9333ea', marginBottom: '0.5rem' }}>23</div>
+                    <div style={{ color: '#6b7280' }}>{language === 'it' ? 'Moduli' : 'Modules'}</div>
+                  </div>
+                  <div style={{ textAlign: 'center' }}>
+                    <div style={{ fontSize: '2.25rem', fontWeight: 'bold', color: '#16a34a', marginBottom: '0.5rem' }}>7</div>
+                    <div style={{ color: '#6b7280' }}>{language === 'it' ? 'Fasi' : 'Phases'}</div>
+                  </div>
+                  <div style={{ textAlign: 'center' }}>
+                    <div style={{ fontSize: '2.25rem', fontWeight: 'bold', color: '#ea580c', marginBottom: '0.5rem' }}>98%</div>
+                    <div style={{ color: '#6b7280' }}>{language === 'it' ? 'Soddisfazione' : 'Satisfaction'}</div>
+                  </div>
+                </div>
+              </main>
+
+              <footer style={{ background: 'white', borderTop: '1px solid #e5e7eb', marginTop: '5rem' }}>
+                <div style={{ maxWidth: '80rem', margin: '0 auto', padding: '2rem 1rem', textAlign: 'center', color: '#6b7280' }}>
+                  <p style={{ marginBottom: '0.5rem' }}>© 2026 77LAB Marketing Academy - Silvia Ciampa</p>
+                  <p style={{ fontSize: '0.875rem' }}>
+                    {language === 'it' ? 'Formazione marketing completa per tutti' : 'Complete marketing education for everyone'}
+                  </p>
+                </div>
+              </footer>
+            </div>
+          );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<MarketingAcademy />);
+    </script>
 </body>
 </html>
