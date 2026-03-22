@@ -1,5 +1,6 @@
 import { fetchAllFeeds } from "@/lib/rss";
 import NewsItemComponent from "@/components/novita/NewsItem";
+import type { NewsItem } from "@/types";
 import { Rss } from "lucide-react";
 
 export const revalidate = 3600; // cache 1 ora
@@ -7,7 +8,7 @@ export const revalidate = 3600; // cache 1 ora
 export const metadata = { title: "Novità dal mondo marketing — 77LAB Academy" };
 
 export default async function NovitaPage() {
-  let news = [];
+  let news: NewsItem[] = [];
   let error = false;
 
   try {

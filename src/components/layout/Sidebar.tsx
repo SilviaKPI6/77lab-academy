@@ -21,7 +21,7 @@ export default function Sidebar() {
       allLezioni.filter((l) => isLessonComplete(l.id)).map((l) => l.id)
     );
     setCompletedLessons(completed);
-  }, [pathname]);
+  }, [pathname, fasi]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const toggleFase = (faseId: string) => {
     setOpenFasi((prev) => {
